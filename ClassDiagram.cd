@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="KR.Consumer">
+    <Position X="9.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AgAgAAAAIABAAAAAQAAACAAAAAQMAAIEAAgCEAgAAAA=</HashCode>
+      <FileName>Consumer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KR.Product">
+    <Position X="5.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAQAAAAQEAAAoAAQAIAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="KR.Shop">
+    <Position X="1" Y="0.5" Width="3.25" />
+    <AssociationLine Name="cart" Type="KR.Product">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.062" Y="0.06" Height="0.182" Width="1.487" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="products" Type="KR.Product">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.01" Y="0.084" Height="0.182" Width="1.702" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAJBACAABEQCAkAAAQBAEAAAAkAAIAAAAABAAAEAA=</HashCode>
+      <FileName>Shop.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="consumer" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="cart" />
+      <Field Name="products" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="KR.Program">
+    <Position X="5.75" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
