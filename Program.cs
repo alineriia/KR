@@ -15,7 +15,6 @@ namespace KR
             const string q = "____________________________________________";
             try
             {
-                ArrayList products = new ArrayList(); 
                 Shop store = new Shop();
                 Console.WriteLine(store);
                 Console.WriteLine(q);

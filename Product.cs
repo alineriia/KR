@@ -55,10 +55,6 @@ namespace KR
             else if (Price > b.Price) return 1;
             else return -1;
         }
-        public void Output() // Метод виводу інформації про товар
-        {
-            Console.WriteLine(code + " "+name + " "+ price + " "); 
-        }
     }
 }
     

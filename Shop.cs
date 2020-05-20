@@ -256,14 +256,6 @@ namespace KR
             }
             Console.WriteLine("\nDelivery for all cities of Ukraine is provided by Nova Poshta\nInternational ship is provided by Meest");
         }
-        public Shop(string n, int nm,string em,int h1,int h2) // Конструктор з параметрами
-        {
-            name = n;
-            number = nm;
-            email = em;
-            hours1 = h1;
-            hours2 = h2;
-        }
         public override string ToString() // Метод для виведення інформації про магазин
         {
             string line = String.Empty;
@@ -281,7 +273,8 @@ namespace KR
             for (int i = 0; i < products.Count; i++)
             {
                 if (products[i].Name.Equals(name1)) { 
-                products[i].Output(); cheker++;
+               Console.WriteLine(products[i]); 
+                    cheker++;
                 }
             }
             if (cheker == 0)
