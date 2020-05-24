@@ -7,6 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 namespace KR
 {
+    /// <summary>
+    /// Клас для задання даних про магазин. Містить основні функції програми.
+    /// </summary>
     class Shop
     {
         string name;
@@ -17,7 +20,10 @@ namespace KR
         double sum = 0;
         List <Product> products = new List<Product>();
         Consumer consumer = new Consumer();
-        public void BdaySale() // Метод для знижки у випадку дня народження клієнта
+        /// <summary>
+        /// Метод для розрахунку знижки у випадку дня народження клієнта
+        /// </summary>
+        public void BdaySale() 
         {
             consumer.Bday();
             if ((consumer.Day >= consumer.OrdDay || consumer.Day <= consumer.OrdDay + 3) && consumer.Month == consumer.OrdMonth)
@@ -31,7 +37,11 @@ namespace KR
                 Console.WriteLine("\n..:: Unfortunately, you don't have any extra sales ::..");
             }
         }
-        public void InputProducts(string file) // Метод зчитування списку товарів з файлу 
+        /// <summary>
+        /// Метод зчитування списку товарів з файлу 
+        /// </summary>
+        /// <param name="file">Файл - список товарів</param>
+        public void InputProducts(string file) 
         {
             string line; 
             using (StreamReader MyFile = new StreamReader(file))
@@ -59,7 +69,10 @@ namespace KR
             }
         }
         List<Product> cart = new List<Product>();
-        public void AddInCart() // Метод додавання товару в кошик
+        /// <summary>
+        /// Метод додавання товару в кошик
+        /// </summary>
+        public void AddInCart() 
         {
             while (true)
             {
@@ -90,7 +103,10 @@ namespace KR
                 }
             }
         }
-        public void RemoveCart() //Метод для видалення товару з кошику
+        /// <summary>
+        /// Метод для видалення товару з кошику
+        /// </summary>
+        public void RemoveCart() 
         {
             if (cart.Count != 0)
             {
@@ -140,7 +156,10 @@ namespace KR
                 Console.WriteLine("\nYour cart is empty. Add something in your Shopping cart");
             }
         }
-        public void Sort() // Метод для сортування списку товарів за ціною
+        /// <summary>
+        ///  Метод для сортування списку товарів за ціною
+        /// </summary>
+        public void Sort() 
         {
             Console.WriteLine("\nFor :LOW - HIGH: sort enter 1\nfor :HIGH - LOW: sort enter 2");
             string ans = Console.ReadLine();
@@ -170,7 +189,10 @@ namespace KR
                     break;
             }
         }
-        public void Operations() // Метод для вибору операції
+        /// <summary>
+        /// Метод для вибору операції
+        /// </summary>
+        public void Operations() 
         {
             Console.WriteLine("====== C H O O S E   O P E R A T I O N =====\n\nAdd\nDelete\nShow\nAccept\n\n===========================================\n");
             string sw = Console.ReadLine();
@@ -195,7 +217,10 @@ namespace KR
                     break;
             } 
         }
-        public void Accepting() // Метод для підтвердження замовлення
+        /// <summary>
+        /// Метод для підтвердження замовлення
+        /// </summary>
+        public void Accepting() 
         {
             if (cart.Count != 0)
             {
@@ -226,7 +251,10 @@ namespace KR
                 Operations();
             }
         }
-        public void ShowCart() // Метод для показу переліку товарів у кошику
+        /// <summary>
+        /// Метод для показу переліку товарів у кошику та загальної суми
+        /// </summary>
+        public void ShowCart()  
         {
             if (cart.Count != 0)
             {
@@ -256,7 +284,11 @@ namespace KR
             }
             Console.WriteLine("\nDelivery for all cities of Ukraine is provided by Nova Poshta\nInternational ship is provided by Meest");
         }
-        public override string ToString() // Метод для виведення інформації про магазин
+        /// <summary>
+        /// Метод для виведення інформації про магазин
+        /// </summary>
+        /// <returns>Інформація про магазин: назва, номер, пошта, графік роботи</returns>
+        public override string ToString() 
         {
             string line = String.Empty;
             line += ("\n========= Our contact information ==========\n\n"+name +" " );
@@ -265,7 +297,10 @@ namespace KR
             line += ("\nWork FROM " + hours1+" TO "+hours2+ "\n\n============== W E L C O M E ===============\n\n");
             return line;
         }
-        public void SearchByName() //Метод пошуку товару за наіменуванням
+        /// <summary>
+        /// Метод пошуку товару за наіменуванням
+        /// </summary>
+        public void SearchByName() 
         {
             int cheker = 0;
             Console.WriteLine("\nEnter name of product to search");

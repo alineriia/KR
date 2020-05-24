@@ -9,10 +9,14 @@ using System.Threading.Tasks;
 namespace KR
 {
     class Program
-    {
+    {/// <summary>
+    /// Метод - вхідна точка програми. Представляє основні функції програми.
+    /// </summary>
+    /// <param name="args">Передача інформації</param>
         static void Main(string[] args)
         {
             const string q = "____________________________________________";
+            
             try
             {
                 Shop store = new Shop();

@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KR
-{
-    class Product: IComparable
+namespace KR {
+
+    /// <summary>
+    /// Клас для задання та читання даних про товар
+    /// </summary>
+    class Product : IComparable
     {
         float price;
         string name;
@@ -18,7 +21,11 @@ namespace KR
             name = n;
             price = p;
         }
-        public override string ToString() // Метод для рядкового представлення об'єкту
+        /// <summary>
+        /// Метод для виведення інформації про об'єкт
+        /// </summary>
+        /// <returns>Інформація про об'єкт: код, найменування, ціна</returns>
+        public override string ToString() 
         {
             string line = String.Empty;
             line += (code+ " ");
@@ -48,7 +55,12 @@ namespace KR
                 return name;
             }
         }
-        public int CompareTo(object obj) // Метод для сортування об'єктів за ціною
+        /// <summary>
+        ///  Метод для сортування об'єктів за ціною
+        /// </summary>
+        /// <param name="obj">Об'єкт з яким порівнюємо інший об'єкт</param>
+        /// <returns>Результат порівняння двох об'єктів</returns>
+        public int CompareTo(object obj)
         {
             Product b = (Product)obj;
             if (Price == b.Price) return 0;

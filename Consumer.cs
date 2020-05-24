@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace KR
 {
+    /// <summary>
+    /// Клас для задання та читання даних про споживача
+    /// </summary>
     class Consumer
     {
         string name;
@@ -33,7 +36,10 @@ namespace KR
             hour = DateTime.Now.Hour; 
             minutes = DateTime.Now.Minute;
         }
-        public void Bday() // Метод для введення дня народження клієнта
+        /// <summary>
+        /// Метод для введення дня народження клієнта 
+        /// </summary>
+        public void Bday() 
         {
             Console.WriteLine("Enter day of your birthday");
             day = int.Parse(Console.ReadLine()); 
